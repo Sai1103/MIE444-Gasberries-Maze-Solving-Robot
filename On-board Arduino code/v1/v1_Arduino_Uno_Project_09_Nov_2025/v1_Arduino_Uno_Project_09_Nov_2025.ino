@@ -20,7 +20,7 @@ AccelStepper motorZ(AccelStepper::DRIVER, stepPinZ, dirPinZ);
 // === Motion settings ===
 float stepDistance = 4*300;   // steps to move per command
 float motorSpeed = 200;     // steps per second (adjust for speed)
-float motorAccel = 1000;    // acceleration (smooth start/stop)
+float motorAccel = 500;    // acceleration (smooth start/stop)
 
 int commandOLD = 'N';
 int instant_command_array[] = {"a","d","q","e","w","s"};
@@ -29,7 +29,7 @@ void setup() {
 // Serial.begin(115200);
   lidar.begin(Serial1);
   //Serial2.begin(115200);
-  Serial3.begin(115200);
+  Serial3.begin(9600);
   pinMode(RPLIDAR_MOTOR, OUTPUT);
 
   analogWrite(RPLIDAR_MOTOR, 80); // spin motor

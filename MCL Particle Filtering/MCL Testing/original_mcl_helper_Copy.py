@@ -251,7 +251,7 @@ class Rover:
     def lidar_scan(self, grid):
         """Simulate a lidar scan with a 180-degree beam width for the rover,
         using a 15-degree beam width (fan) for each scan angle."""
-        num_scan_angles = 73
+        num_scan_angles = 72
         scan_angles = np.linspace(0, 360, num_scan_angles) * (math.pi / 180)  # Main scan angles
         #beam_half_angle = 7.5 * (math.pi / 180)  # Half of 15 degrees in radians
         lidar_distances = np.zeros(num_scan_angles)
